@@ -1,0 +1,17 @@
+{
+  "name": "swe-432-hw2",
+  "version": "1.0.0",
+  "description": "A simple microservice that fetches a data set from a third-party API and offers endpoints for manipulating a local copy of this dataset",
+  "main": "LOLdata.js",
+  "scripts": {
+    "start": "nodemon LOLdata.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Plassmeyer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "node-fetch": "^1.7.3",
+    "nodemon": "^1.12.1"
+  }
+}

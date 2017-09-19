@@ -1,13 +1,5 @@
 // Justin Plassmeyer
 
-//senarios
-// '/' allows them to see a list of available routes
-// '/class' allows them to only get the requirements to find the requirments for the class match up
-// '/classes/:classid/vs/:classid2' allows people to get a matchup of classes
-// '/champ/difficult/:champid' lets you get a list of  difficult champs, add a champ, make your own list, and delete champs from the list
-// '/champ/:champid' allows you to see the info for a champ
-// '/cleanup' cleans the list ,makes sure their are only actual champs, of difficult champs or creates it if their are none 
-// '/tank' looks up and finds how many tanks their are based upon health and defense
 
 
 const express = require('express');
@@ -15,6 +7,8 @@ const app = express();
 var scs;
 var fetch = require('node-fetch');
 var list_champs;
+app.set('port', (process.env.PORT || 5000));
+
 fetch('http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/champion.json')
     .then(res => res.json())
     .then(json => scs = json)
@@ -202,8 +196,8 @@ app.route('/cleanup')
 
     });
 
-app.listen(3000, function () {
-    console.log(' app listening on port 3000!')
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
 });
 
 class Cleaner {

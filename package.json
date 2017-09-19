@@ -4,14 +4,23 @@
   "description": "A simple microservice that fetches a data set from a third-party API and offers endpoints for manipulating a local copy of this dataset",
   "main": "LOLdata.js",
   "scripts": {
-    "start": "npm LOLdata.js",
+    "start": "nodemon LOLdata.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Justin Plassmeyer",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "node-fetch": "^1.7.3",
     "nodemon": "^1.12.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NuclearW1nter/loldata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NuclearW1nter/loldata/issues"
+  },
+  "homepage": "https://github.com/NuclearW1nter/loldata#readme"
 }
